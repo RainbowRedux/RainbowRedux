@@ -1,6 +1,6 @@
 # RainbowRedux
 
-RainbowRedux is an attempt to remake the engine for the original Rainbow Six games.
+RainbowRedux is an attempt to remake the engine for the original Rainbow Six games. This project is not a remake of the game, and does not distribute game content. You require the original game to play. You can pick up a copy from ebay or [GOG.com](https://www.gog.com/game/tom_clancys_rainbow_six)
 
 This repository holds the Unreal Engine project.
 
@@ -27,6 +27,15 @@ This project uses 3 repositories.
 * [UnrealEnginePython (Unreal plugin providing python environment and binding)](https://github.com/boristsr/UnrealEnginePython)
 
 If you are interested in working on this project you will probably only ever need to look at the first 2 repos.
+
+## Unreal Engine Version
+
+This project is currently based on Unreal Engine 4.23. The 2 main factors that will cause this project to lag behind the latest unreal version is:
+
+* time involved in upgrading a project. It's not always a quick operation.
+* Support from UnrealEnginePython. The last official support is for 4.23, with community maintained branches for 4.24.
+
+I am planning to upgrade the project to 4.25 on release, provided there is support from a community branch of UnrealEnginePython, as this will give more stable ray tracing support.
 
 ## Git LFS notes
 
