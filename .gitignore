@@ -87,7 +87,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -185,3 +184,8 @@ wiki/
 #.vscode/
 .vscode/settings.json
 .wakatime-project
+
+# Ignore extra repos.
+# These will be pointing to different repos for active developers, so they are not included as submodules
+Content/Scripts
+Plugins/UnrealEnginePython

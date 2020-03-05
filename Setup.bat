@@ -9,5 +9,7 @@ pause
 
 mkdir Content\Scripts\
 git clone https://github.com/RainbowRedux/RainbowSixFileConverters Content\Scripts
+mkdir Plugins
+git clone https://github.com/boristsr/UnrealEnginePython Plugins\UnrealEnginePython
 
 xcopy /s Redist\PIL Content\Scripts\PIL\ /EXCLUDE:XCopyExclude.txt
