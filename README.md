@@ -18,7 +18,16 @@ If you'd like to discuss this project more and hear the latest info, please join
 * Run Setup.bat to clone the extra dependencies and copy files to the correct spot
 * Double click the RainbowRedux.uproject file
 
-## Project Layout
+## Project information
+
+### Asset, coding and naming standards/conventions
+
+* Python code should be Python 3.7 compatible, mostly adhering to the PEP8 standard
+* Unreal assets and C++ code should mostly adhere to the following standards
+  * [Unreal Coding Standards](https://docs.unrealengine.com/en-US/Programming/Development/CodingStandard/index.html)
+  * [Allars' UE4 Style Guide](https://github.com/Allar/ue4-style-guide)
+
+### Layout
 
 This project uses 3 repositories together.
 
