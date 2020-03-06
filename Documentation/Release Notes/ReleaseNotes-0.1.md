@@ -28,7 +28,7 @@ The longest part of loading currently is processing the RSBs. Since this is all 
 * R - Reset Player position
 * V - Toggle Room volume visibility
 * P - Toggle Portal visibility
-* Esc - Quits the game
+* Esc - Choose a new map and exit the game.
 
 ### Debug weapon
 
@@ -61,6 +61,12 @@ Press ` (tilde) twice to bring down the console
 **Change ambient light brightness** by typing "ce SetAmbientBrightness \<value\>" where value can be a floating point number. I recommend keeping the value between 0 and 5.
 
 **FPS** can be viewed by typing "stat fps"
+
+**Turn off Screen Space ambient occlusion** with r.AmbientOcclusionMaxQuality 0
+
+**Turn off screen space reflections** with r.ssr.quality 0
+
+**Change effective resolution** r.screenpercentage 50 will change the resolution to 50%
 
 **Draw Calls** can be viewed by typing "stat rhi" and looking for "DrawPrimitive Calls" in the on screen display
 
