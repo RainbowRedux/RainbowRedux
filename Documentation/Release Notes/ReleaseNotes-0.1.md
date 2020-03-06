@@ -16,15 +16,19 @@ Join the community
 
 * Discord: https://discord.gg/YygR4S8
 * Github: https://github.com/RainbowRedux
-* News and occasional updates at https://www.gdcorner.com/
+* News and updates at https://www.gdcorner.com/
 
 ## Instructions
 
 Upon launching the game you will be prompted to locate your RainbowSix.exe file. Navigate to where your original RainbowSix installation is and select this executable.
 
-### Choosing a map
+### Choosing a mission
 
-To see a list of available missions bring down the console by pressing the tilde key (~) twice and then use the command "ce ListMissions" to see the available missions. To load a mission, type "ce LoadMission MISSION-NAME". Keep in mind the mission name is case sensitive.
+You should be presented with a menu after successfully locating a game install. If you don't see the menu automatically, just press escape to bring it up.
+
+Select a mission from the list on the left and click load mission.
+
+If you don't see any missions on the left, your game was not recognized. Please contact us on Discord or on Github.
 
 ### Speeding up loading with PNG Cache
 
