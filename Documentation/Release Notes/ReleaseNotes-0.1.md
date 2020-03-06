@@ -2,11 +2,21 @@
 
 RainbowRedux is an attempt to remake the engine for the original Rainbow Six games.
 
+In this first release you can explore all the maps from Rainbow Six and the expansion Eagle Watch.
+
 This project is not a remake of the game, and does not distribute game content. You require the original game to play. You can pick up a copy from ebay or [GOG.com](https://www.gog.com/game/tom_clancys_rainbow_six). A demo is available on [archive.org](https://archive.org/details/TomClancysRainbowSixDemo).
 
 ## Release History
 
 * **0.1** - First Release - "Level Explorer"
+
+## Community
+
+Join the community
+
+* Discord: https://discord.gg/YygR4S8
+* Github: https://github.com/RainbowRedux
+* News and occasional updates at https://www.gdcorner.com/
 
 ## Instructions
 
