@@ -20,13 +20,17 @@ If you'd like to discuss this project more and hear the latest info, please join
 
 ## Project Layout
 
-This project uses 3 repositories.
+This project uses 3 repositories together.
 
 * RainbowRedux(This repository)
 * [RainbowSixFileReaders (Python library containing the majority of data loading code)](https://github.com/RainbowRedux/RainbowSixFileConverters)
+  * This is cloned in Content\Scripts
 * [UnrealEnginePython (Unreal plugin providing python environment and binding)](https://github.com/boristsr/UnrealEnginePython)
+  * This is cloned in Plugins\UnrealEnginePython
 
 If you are interested in working on this project you will probably only ever need to look at the first 2 repos.
+
+Due to the need for some developers to use their own forks of repositories I have not set these up as submodules, rather these can be cloned through the setup.bat step. Please change this file, or re-clone these repositories manually as appropriate. (Don't forget to copy PIL like in setup.bat)
 
 ## Unreal Engine Version
 
