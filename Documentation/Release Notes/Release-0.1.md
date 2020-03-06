@@ -28,6 +28,7 @@ The longest part of loading currently is processing the RSBs. Since this is all 
 * R - Reset Player position
 * V - Toggle Room volume visibility
 * P - Toggle Portal visibility
+* Esc - Quits the game
 
 ### Debug weapon
 
