@@ -97,7 +97,8 @@ Press ` (tilde) twice to bring down the console
 * **Large packaged project size** - This is an early stage unreal project which I have mostly built off the First Person template. In the future I will be spending some time to bring the size down significantly by stripping out unused assets and plugins.
 * **Wrong Skies/Dynamic skies not used** - Currently unless a map has a static sky, a default unreal sky is visible. This will be fixed at some point in the future.
 * **obstacletest.map from Rainbow Six doesn't load** - Best as I can tell this map was a very early feature testing map that was shipped by accident. It's only got some of the expected data structures and deviates from the standard file format. I haven't invested the time to get this map loading. Support for this map is not planned.
-* **Some collision is wrong** - This is still being worked through. The original game used a hybrid 2D/3D collision system. Rogue spear appeared to use a similar system, but had very different data structures for storing this data. Some data is still not read (like surface properties from STP files). At the moment I'm trying to coerce it all to work in 3D, but at some point I'll likely need to generate a 3D mesh based off the 2d collision flags. On top of that, currently the debug gun shoots projectiles configured like grenades, so walls or objects that would allow grenades to pass through can't be hit, while walls that would allow bullets to travel through can be hit.
+* **Some translucent materials are opaque in Eagle Watch maps** These materials are setup slightly differently to Rainbow Six and Rogue Spear materials. Investigations are underway.
+* **Some collision is wrong** - This is still being worked through. The original game used a hybrid 2D/3D collision system. Rogue spear appeared to use a similar system, but had very different data structures for storing this data. Some data is still not read (like surface properties from STP files). At the moment I'm trying to coerce it all to work in 3D, but at some point I'll likely need to generate a 3D mesh based off the 2D collision flags. On top of that, currently the debug gun shoots projectiles configured like grenades, so walls or objects that would allow grenades to pass through can't be hit, while walls that would allow bullets to travel through can be hit.
 
 ## Credits and attributions
 
@@ -110,7 +111,7 @@ Pillow is used for supporting image functions.  This is subject to the [PIL Soft
 
 UnrealEnginePython is used for enabling python at runtime.
 
-Unreal Engine 4 is used for the game engine. 
+Unreal Engine 4 is used for the game engine.
 
 ### Special Thanks
 
