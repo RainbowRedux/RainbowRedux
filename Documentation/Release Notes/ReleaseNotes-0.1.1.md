@@ -1,4 +1,4 @@
-# RainbowRedux v0.1 - First Release - "Level Explorer"
+# RainbowRedux v0.1.1 - First Release - "Level Explorer"
 
 RainbowRedux is an attempt to remake the engine for the original Rainbow Six games.
 
