@@ -1,6 +1,6 @@
-set OUT_DIR=d:\cookout
-set ZIP_LOC=D:\cookout\RainbowRedux.zip
-set SZ_LOC=D:\cookout\RainbowRedux.7z
+set OUT_DIR=.\Packaged
+set ZIP_LOC=.\Packaged\RainbowRedux.zip
+set SZ_LOC=.\Packaged\RainbowRedux.7z
 set SEVENZ_EXE="C:\Program Files\7-Zip\7z.exe"
 
 ::Copy to a fresh folder so we don't ruin the original build and it's PDBs

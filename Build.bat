@@ -1,7 +1,7 @@
 set UE4ROOT="E:\Epic Games\UE_4.23"
 set PROJECT_NAME=RainbowRedux
 set PROJECTDIR=%~dp0
-set OUT_DIR=d:\cookout
+set OUT_DIR=.\Packaged
 set BUILD_PROFILE=Development
 cd %~dp0
 
