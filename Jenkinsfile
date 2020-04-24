@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Setup Repo') {
             steps {
-                bat 'Setup.bat'
+                bat 'Setup.bat /force'
             }
         }
         stage('Build Unreal') {
