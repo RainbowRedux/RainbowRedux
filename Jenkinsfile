@@ -22,6 +22,7 @@ pipeline {
     post {
         always {
             archiveArtifacts artifacts: 'Packaged/*.7z', fingerprint: true
+            cleanWs()
         }
     }
 }
