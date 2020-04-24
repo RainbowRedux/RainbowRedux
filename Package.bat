@@ -15,7 +15,7 @@ del %SZ_LOC%
 del %SZ_DEBUG_LOC%
 
 ::Copy to a fresh folder so we don't ruin the original build and it's PDBs
-move /s %OUT_DIR%\WindowsNoEditor %OUT_DIR%\RainbowRedux
+move %OUT_DIR%\WindowsNoEditor %OUT_DIR%\RainbowRedux
 
 ::Compress with PDBs
 %SEVENZ_EXE% a %SZ_DEBUG_LOC% %OUT_DIR%\RainbowRedux
