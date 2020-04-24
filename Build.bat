@@ -1,7 +1,11 @@
-set UE4ROOT="E:\Epic Games\UE_4.23"
+set PROJECTDIR=%WORKSPACE%
+if ["%WORKSPACE%"]==[""] (
+    set PROJECTDIR=%~dp0
+)
+
+set UE4ROOT="C:\Unreal\UE_4.23"
 set PROJECT_NAME=RainbowRedux
-set PROJECTDIR=%~dp0
-set OUT_DIR=d:\cookout
+set OUT_DIR=%PROJECTDIR%\Packaged
 set BUILD_PROFILE=Development
 cd %~dp0
 
@@ -10,6 +14,7 @@ MKDIR %OUT_DIR%
 
 ::Run UE4 packaging process
 call %UE4ROOT%\Engine\Build\BatchFiles\RunUAT.bat BuildCookRun -project=%PROJECTDIR%\%PROJECT_NAME%.uproject -clientconfig=%BUILD_PROFILE% -platform=Win64 -cook -maps=AllMaps -build -compile -stage -pak -archive -UnVersioned -archivedirectory="%OUT_DIR%"
+
 ::Copy Python scripts
 mkdir %OUT_DIR%\WindowsNoEditor\%PROJECT_NAME%\Content\Scripts
 xcopy /s %PROJECTDIR%\Content\Scripts %OUT_DIR%\WindowsNoEditor\%PROJECT_NAME%\Content\Scripts\ /EXCLUDE:XCopyExclude.txt
@@ -20,4 +25,11 @@ xcopy /s %PROJECTDIR%\Redist\tkinter %OUT_DIR%\WindowsNoEditor\%PROJECT_NAME%\%P
 ::Copy Python
 xcopy /s %PROJECTDIR%\Redist\Python\* %OUT_DIR%\WindowsNoEditor\%PROJECT_NAME%\Binaries\Win64\ /EXCLUDE:XCopyExclude.txt
 
-pause
+::Write build number
+echo %PROJECT_NAME% Version Information > %OUT_DIR%\WindowsNoEditor\Version.txt
+echo Jenkins project: %JOB_NAME% >> %OUT_DIR%\WindowsNoEditor\Version.txt
+echo Jenkins build: %BUILD_NUMBER% >> %OUT_DIR%\WindowsNoEditor\Version.txt
+echo Jenkins node: %NODE_NAME% >> %OUT_DIR%\WindowsNoEditor\Version.txt
+echo GIT URL: %GIT_URL% >> %OUT_DIR%\WindowsNoEditor\Version.txt
+echo GIT Branch: %GIT_BRANCH% >> %OUT_DIR%\WindowsNoEditor\Version.txt
+echo GIT Commit: %GIT_COMMIT% >> %OUT_DIR%\WindowsNoEditor\Version.txt

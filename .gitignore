@@ -189,3 +189,6 @@ wiki/
 # These will be pointing to different repos for active developers, so they are not included as submodules
 Content/Scripts
 Plugins/UnrealEnginePython
+
+# Ignore the output directory of build scripts
+Packaged/
