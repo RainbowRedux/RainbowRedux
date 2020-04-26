@@ -15,6 +15,6 @@ RMDIR /s /q %PROJECTDIR%\Intermediate
 RMDIR /s /q %PROJECTDIR%\Plugins\UnrealEnginePython
 RMDIR /s /q %PROJECTDIR%\Content\Scripts
 
-del /f /q %PROJECTDIR%\Build\*.pdb
-del /f /q %PROJECTDIR%\Build\*.dll
-del /f /q %PROJECTDIR%\Build\*.exe
+del /f /q %PROJECTDIR%\Binaries\Win64\*.pdb
+del /f /q %PROJECTDIR%\Binaries\Win64\*.dll
+del /f /q %PROJECTDIR%\Binaries\Win64\*.exe
