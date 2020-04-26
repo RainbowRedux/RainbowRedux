@@ -16,6 +16,9 @@ MKDIR %OUT_DIR%
 ::Run UE4 packaging process
 echo UE4 Build process starting
 call %UE4ROOT%\Engine\Build\BatchFiles\RunUAT.bat BuildCookRun -project=%PROJECTDIR%\%PROJECT_NAME%.uproject -clientconfig=%BUILD_PROFILE% -platform=Win64 -cook -maps=AllMaps -build -compile -stage -pak -archive -UnVersioned -archivedirectory="%OUT_DIR%"
+IF %ERRORLEVEL% NEQ 0 (
+    exit /b %ERRORLEVEL%
+)
 
 ::Copy Python scripts
 echo Copying python libraries
