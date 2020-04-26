@@ -33,3 +33,6 @@ echo Jenkins node: %NODE_NAME% >> %OUT_DIR%\WindowsNoEditor\Version.txt
 echo GIT URL: %GIT_URL% >> %OUT_DIR%\WindowsNoEditor\Version.txt
 echo GIT Branch: %GIT_BRANCH% >> %OUT_DIR%\WindowsNoEditor\Version.txt
 echo GIT Commit: %GIT_COMMIT% >> %OUT_DIR%\WindowsNoEditor\Version.txt
+
+::Copy release notes
+copy "%PROJECTDIR%\Documentation\Release Notes\ReleaseNotes-Latest.md" %OUT_DIR%\WindowsNoEditor\ReleaseNotes.txt
