@@ -2,7 +2,7 @@ pipeline {
     agent { label 'windows' }
 
     stages {
-        stage('Clean working directory') {
+        stage('Clean Working Directory') {
             steps {
                 bat 'CleanBuilds.bat'
             }
