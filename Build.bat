@@ -1,3 +1,4 @@
+@echo off
 set PROJECTDIR=%WORKSPACE%
 if ["%WORKSPACE%"]==[""] (
     set PROJECTDIR=%~dp0
@@ -13,9 +14,11 @@ RMDIR /s /q %OUT_DIR%
 MKDIR %OUT_DIR%
 
 ::Run UE4 packaging process
+echo UE4 Build process starting
 call %UE4ROOT%\Engine\Build\BatchFiles\RunUAT.bat BuildCookRun -project=%PROJECTDIR%\%PROJECT_NAME%.uproject -clientconfig=%BUILD_PROFILE% -platform=Win64 -cook -maps=AllMaps -build -compile -stage -pak -archive -UnVersioned -archivedirectory="%OUT_DIR%"
 
 ::Copy Python scripts
+echo Copying python libraries
 mkdir %OUT_DIR%\WindowsNoEditor\%PROJECT_NAME%\Content\Scripts
 xcopy /s %PROJECTDIR%\Content\Scripts %OUT_DIR%\WindowsNoEditor\%PROJECT_NAME%\Content\Scripts\ /EXCLUDE:XCopyExclude.txt
 ::Copy Pillow
@@ -26,6 +29,7 @@ xcopy /s %PROJECTDIR%\Redist\tkinter %OUT_DIR%\WindowsNoEditor\%PROJECT_NAME%\%P
 xcopy /s %PROJECTDIR%\Redist\Python\* %OUT_DIR%\WindowsNoEditor\%PROJECT_NAME%\Binaries\Win64\ /EXCLUDE:XCopyExclude.txt
 
 ::Write build number
+echo Writing Version Information
 echo %PROJECT_NAME% Version Information > %OUT_DIR%\WindowsNoEditor\Version.txt
 echo Jenkins project: %JOB_NAME% >> %OUT_DIR%\WindowsNoEditor\Version.txt
 echo Jenkins build: %BUILD_NUMBER% >> %OUT_DIR%\WindowsNoEditor\Version.txt
@@ -35,4 +39,5 @@ echo GIT Branch: %GIT_BRANCH% >> %OUT_DIR%\WindowsNoEditor\Version.txt
 echo GIT Commit: %GIT_COMMIT% >> %OUT_DIR%\WindowsNoEditor\Version.txt
 
 ::Copy release notes
+echo Copying Release Notes
 copy "%PROJECTDIR%\Documentation\Release Notes\ReleaseNotes-Latest.md" %OUT_DIR%\WindowsNoEditor\ReleaseNotes.txt
