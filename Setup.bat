@@ -14,7 +14,6 @@ echo Press CTRL-C, or close this window to abort
 pause
 
 :START
-@echo on
 
 rmdir /s /q Content\Scripts\
 mkdir Content\Scripts\
@@ -23,3 +22,5 @@ mkdir Plugins
 git clone https://github.com/boristsr/UnrealEnginePython Plugins\UnrealEnginePython
 
 xcopy /s Redist\PIL Content\Scripts\PIL\ /EXCLUDE:XCopyExclude.txt
+
+echo Finished project setup
