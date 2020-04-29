@@ -18,9 +18,10 @@ pause
 rmdir /s /q Content\Scripts\
 mkdir Content\Scripts\
 git clone https://github.com/RainbowRedux/RainbowSixFileConverters Content\Scripts
+rmdir /s /q Plugins
 mkdir Plugins
 git clone https://github.com/boristsr/UnrealEnginePython Plugins\UnrealEnginePython
 
-xcopy /s Redist\PIL Content\Scripts\PIL\ /EXCLUDE:XCopyExclude.txt
+xcopy /s Redist\site-packages\* Content\Scripts\ /EXCLUDE:XCopyExclude.txt
 
 echo Finished project setup

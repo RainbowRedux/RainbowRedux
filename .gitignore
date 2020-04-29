@@ -192,3 +192,8 @@ Plugins/UnrealEnginePython
 
 # Ignore the output directory of build scripts
 Packaged/
+
+# Don't ignore redist folders
+!Redist/**/*
+# Reignore PYC files
+Redist/**/*.pyc
