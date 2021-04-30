@@ -6,7 +6,7 @@ This repository holds the Unreal Engine project.
 
 ## Discord / Community
 
-If you'd like to discuss this project more and hear the latest info, please join us on <a href="https://discord.gg/WK9jbqR"><img src="https://img.shields.io/badge/discord-join-7289DA.svg?logo=discord&longCache=true&style=flat" /></a>.
+If you'd like to discuss this project more and hear the latest info, please join us on <a href="https://discord.gg/bbE8BRU"><img src="https://img.shields.io/badge/discord-join-7289DA.svg?logo=discord&longCache=true&style=flat" /></a>.
 
 ## Setup / Prereqs
 
