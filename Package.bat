@@ -1,15 +1,10 @@
-set PROJECTDIR=%WORKSPACE%
-if ["%WORKSPACE%"]==[""] (
-    set PROJECTDIR=%~dp0
-)
-
-set OUT_DIR=%PROJECTDIR%\Packaged
 @echo off
+cd %~dp0
+call EnvVars.bat
 
 set ZIP_LOC=%PROJECTDIR%\Packaged\RainbowRedux.zip
 set SZ_LOC=%PROJECTDIR%\Packaged\RainbowRedux.7z
 set SZ_DEBUG_LOC=%PROJECTDIR%\Packaged\RainbowRedux-debug.7z
-set SEVENZ_EXE="C:\Program Files\7-Zip\7z.exe"
 
 ::Delete old build artifacts
 echo Deleting old build artifacts
@@ -30,5 +25,5 @@ echo Removing PDB files
 del %OUT_DIR%\RainbowRedux\RainbowRedux\Binaries\Win64\RainbowRedux.pdb
 
 echo Compressing build without PDBs
-::Compress build into 2 formats
+::Compress without PDBs
 %SEVENZ_EXE% a %SZ_LOC% %OUT_DIR%\RainbowRedux
