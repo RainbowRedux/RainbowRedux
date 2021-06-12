@@ -1,15 +1,6 @@
 @echo off
-
-set PROJECTDIR=%WORKSPACE%
-if ["%WORKSPACE%"]==[""] (
-    set PROJECTDIR=%~dp0
-)
-
-set UE4ROOT="C:\Unreal\UE_4.23"
-set PROJECT_NAME=RainbowRedux
-set OUT_DIR=%PROJECTDIR%\Packaged
-set BUILD_PROFILE=Development
 cd %~dp0
+call EnvVars.bat
 
 echo Removing dirty directories
 RMDIR /s /q %OUT_DIR%
